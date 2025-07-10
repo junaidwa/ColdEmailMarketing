@@ -1,0 +1,22 @@
+<%- layout('layouts/boilerplate') %>
+<body>
+    <h1>Login to Email Sending Service</h1>
+
+    <form action="/login" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        
+        <br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <br>
+    <p>Don't have an account? <a href="/signup">Register here</a></p>
+    
+</body>

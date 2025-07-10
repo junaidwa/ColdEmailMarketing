@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">MyReach</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto">
+        <a class="nav-link <%= currentPath === '/' ? 'active' : '' %>" href="/">Home</a>
+      </div>
+      
+      <div class="navbar-nav">
+        <% if (currentUser) { %>
+          <!-- Show username and logout when user is logged in -->
+          <span class="navbar-text me-3">
+            Welcome, <%= currentUser.username %>
+          </span>
+          <a class="nav-link" href="/logout">Logout</a>
+        <% } else { %>
+          <!-- Show login/signup when user is NOT logged in -->
+          <a class="nav-link <%= currentPath === '/login' ? 'active' : '' %>" href="/login">Login</a>
+          <a class="nav-link <%= currentPath === '/signup' ? 'active' : '' %>" href="/signup">SignUp</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

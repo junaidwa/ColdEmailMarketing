@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styling */
+        .footer {
+            background-color: white;
+            padding: 20px 0;
+            border-top: 1px solid #e4e4e4;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .footer-links a {
+            color: #222;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .footer-divider {
+            color: #ddd;
+        }
+        
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            color: #222;
+            padding: 0;
+            font-size: 14px;
+        }
+        
+        .dropdown-toggle::after {
+            margin-left: 5px;
+        }
+        
+        .social-icon {
+            color: #222;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="footer-left mb-3 mb-md-0">
+                    <div class="footer-links">
+                        <span>© 2025 Airbnb, Inc.</span>
+                        <span class="footer-divider">·</span>
+                        <a href="#">Terms</a>
+                        <span class="footer-divider">·</span>
+                        <a href="#">Sitemap</a>
+                        <span class="footer-divider">·</span>
+                        <a href="#">Privacy</a>
+                        <span class="footer-divider">·</span>
+                        <a href="#">Your Privacy Choices</a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> English (US)
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#">English (US)</a></li>
+                            <li><a class="dropdown-item" href="#">Español</a></li>
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                        </ul>
+                    </div>
+                    
+                    <span>$ USD</span>
+                    
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
