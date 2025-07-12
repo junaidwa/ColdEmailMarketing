@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sender</title>
+</head>
+<body>
+<%- layout('layouts/boilerplate') %>
+<h1>Add Sender</h1>
+<form action="/addsender" method="POST">
+    <input type="email" name="email" placeholder="Enter sender email" required>
+    <button type="submit">Add Sender</button>
+</form>
+<p>Supported formats: PDF, DOC, DOCX, TXT</p>
+
+    
+</body>
+</html>

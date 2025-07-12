@@ -161,9 +161,6 @@ req.login(resutdata, (err) => {
 
 });
 
-
-
-
 app.get("/logout", (req, res, next) => {
   req.logout((err) => {
     if (err) {
@@ -175,6 +172,20 @@ app.get("/logout", (req, res, next) => {
     // res.redirect("/listings");
   });
 });
+
+app.get('/addsenders',(req,res)=>{
+  res.render('Addsender.ejs');
+})
+
+
+app.get('/SendMail',(req,res)=>{
+  res.render('SendMail.ejs');
+
+})
+
+
+
+
 
 app.get("/upload", (req, res) => {
   res.render("upload");
@@ -229,11 +240,9 @@ app.post("/upload", upload.single("document"), async (req, res) => {
 
     extractedEmails = emails;
 
-    res.send(`
-      <h3>File uploaded and processed successfully!</h3>
-      <p><strong>Extracted Emails:</strong></p>
-      <pre>${emails.join("\n")}</pre>
-    `);
+    req.flash('success', 'Document uploaded and emails extracted successfully!');
+
+    res.redirect('/SendMail');
   } catch (err) {
     console.error("Error processing file:", err);
     res.status(500).send("Error extracting data from file.");
@@ -258,7 +267,7 @@ app.post("/SendMail", async (req, res) => {
       user: sender,
       pass: SenderAdmin, // Consider using environment variables instead of hardcoding passwords
     },
-  });
+  });SenderAdmin
 
   //   const mailText = "Slam! I am Muhammad Junaid!";
 
@@ -271,9 +280,9 @@ app.post("/SendMail", async (req, res) => {
 
   console.log("Message sent:", info.messageId);
   console.log("Text sent:", mailtext); // Manually print the text sent
-  res.send(
-    "Message sent successfully to all given emails! <br> <a href='/'>Go Back</a>"
-  );
+     req.flash('success', 'Email Sent Successfully successfully!');
+     res.redirect('/');
+
 });
 // Create a test account or replace with real credentials.
 

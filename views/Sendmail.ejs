@@ -1,0 +1,18 @@
+<%- layout('layouts/boilerplate') %>
+<body>
+     <h1>Welcome to the Email Sending Service!</h1>
+    <form action="/SendMail" method="POST">
+        <!-- <input type="email" name="email" placeholder="Enter recipient email" required> -->
+        <textarea name="text" placeholder="Enter your message" required></textarea>
+        <br>
+    
+        <select name="sender" id="sender">
+            <option value="junaidwattoo33@gmail.com">Muhammad Junaid (Admin)</option>
+            <!-- <option value="saeedaliwriter@gmail.com">Saeed Ahmad </option> -->
+            <option value="jwattoo564@gmail.com">Junaid Wattoo (CEO) </option>
+        </select>
+        
+        <button type="submit">Send Email</button>
+    </form>
+    
+</body>
