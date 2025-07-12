@@ -1,29 +1,53 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">MyReach</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i-lucide data-lucide="mail" class="icon"></i-lucide>
+      MyReach
+    </a>
+    
+    <button class="btn btn-secondary navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <i-lucide data-lucide="menu" class="icon"></i-lucide>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-        <a class="nav-link <%= currentPath === '/' ? 'active' : '' %>" href="/">Home</a>
-        <a class="nav-link" href="/upload">Upload Documents</a>
-        <a class="nav-link" href="/addsenders">Add Senders</a>
-        <a class="nav-link" href="/SendMail">Send Mails</a>
+        <a class="nav-link <%= currentPath === '/' ? 'active' : '' %>" href="/">
+          <i-lucide data-lucide="home" class="icon"></i-lucide>
+          Home
+        </a>
+        <a class="nav-link <%= currentPath === '/upload' ? 'active' : '' %>" href="/upload">
+          <i-lucide data-lucide="upload-cloud" class="icon"></i-lucide>
+          Upload
+        </a>
+        <a class="nav-link <%= currentPath === '/addsenders' ? 'active' : '' %>" href="/addsenders">
+          <i-lucide data-lucide="users" class="icon"></i-lucide>
+          Senders
+        </a>
+        <a class="nav-link <%= currentPath === '/SendMail' ? 'active' : '' %>" href="/SendMail">
+          <i-lucide data-lucide="send" class="icon"></i-lucide>
+          Send Mail
+        </a>
       </div>
-   
       
       <div class="navbar-nav">
         <% if (currentUser) { %>
-          <!-- Show username and logout when user is logged in -->
-          <span class="navbar-text me-3">
-            Welcome, <%= currentUser.username %>
+          <span class="navbar-text">
+            <i-lucide data-lucide="user" class="icon"></i-lucide>
+            <%= currentUser.username %>
           </span>
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link" href="/logout">
+            <i-lucide data-lucide="log-out" class="icon"></i-lucide>
+            Logout
+          </a>
         <% } else { %>
-          <!-- Show login/signup when user is NOT logged in -->
-          <a class="nav-link <%= currentPath === '/login' ? 'active' : '' %>" href="/login">Login</a>
-          <a class="nav-link <%= currentPath === '/signup' ? 'active' : '' %>" href="/signup">SignUp</a>
+          <a class="nav-link <%= currentPath === '/login' ? 'active' : '' %>" href="/login">
+            <i-lucide data-lucide="log-in" class="icon"></i-lucide>
+            Login
+          </a>
+          <a class="nav-link <%= currentPath === '/signup' ? 'active' : '' %>" href="/signup">
+            <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+            Sign Up
+          </a>
         <% } %>
       </div>
     </div>

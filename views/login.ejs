@@ -1,22 +1,54 @@
 <%- layout('layouts/boilerplate') %>
-<body>
-    <h1>Login to Email Sending Service</h1>
 
-    <form action="/login" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email" required>
-        
-        <br><br>
+<div class="card">
+    <div class="text-center mb-4">
+        <i-lucide data-lucide="log-in" class="icon mb-2" size="48"></i-lucide>
+        <h1>Welcome Back</h1>
+        <p>Log in to your MyReach account</p>
+    </div>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required>
-        
-        <br><br>
+    <form action="/login" method="POST" class="form">
+        <div class="form-group">
+            <label for="username">
+                <i-lucide data-lucide="user" class="icon"></i-lucide>
+                Username
+            </label>
+            <input 
+                type="text" 
+                name="username" 
+                id="username" 
+                placeholder="Enter your username"
+                required
+                class="form-control"
+            >
+        </div>
 
-        <button type="submit">Login</button>
+        <div class="form-group">
+            <label for="password">
+                <i-lucide data-lucide="lock" class="icon"></i-lucide>
+                Password
+            </label>
+            <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Enter your password"
+                required
+                class="form-control"
+            >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            <i-lucide data-lucide="log-in" class="icon"></i-lucide>
+            Log In
+        </button>
     </form>
 
-    <br>
-    <p>Don't have an account? <a href="/signup">Register here</a></p>
-    
-</body>
+    <p class="text-center mt-4">
+        Don't have an account? 
+        <a href="/signup" class="text-primary">
+            <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+            Sign up here
+        </a>
+    </p>
+</div>

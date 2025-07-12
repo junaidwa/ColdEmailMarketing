@@ -1,18 +1,42 @@
 <%- layout('layouts/boilerplate') %>
-<body>
-     <h1>Welcome to the Email Sending Service!</h1>
-    <form action="/SendMail" method="POST">
-        <!-- <input type="email" name="email" placeholder="Enter recipient email" required> -->
-        <textarea name="text" placeholder="Enter your message" required></textarea>
-        <br>
-    
-        <select name="sender" id="sender">
-            <option value="junaidwattoo33@gmail.com">Muhammad Junaid (Admin)</option>
-            <!-- <option value="saeedaliwriter@gmail.com">Saeed Ahmad </option> -->
-            <option value="jwattoo564@gmail.com">Junaid Wattoo (CEO) </option>
-        </select>
-        
-        <button type="submit">Send Email</button>
+
+<div class="card">
+    <div class="text-center mb-4">
+        <i-lucide data-lucide="mail" class="icon mb-2" size="48"></i-lucide>
+        <h1>Send Email</h1>
+        <p>Compose and send your email message</p>
+    </div>
+
+    <form action="/SendMail" method="POST" class="form">
+        <div class="form-group">
+            <label for="sender">
+                <i-lucide data-lucide="user" class="icon"></i-lucide>
+                Send From
+            </label>
+            <select name="sender" id="sender" class="form-control">
+                <option value="junaidwattoo33@gmail.com">Muhammad Junaid (Admin)</option>
+                <option value="jwattoo564@gmail.com">Junaid Wattoo (CEO)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="text">
+                <i-lucide data-lucide="message-square" class="icon"></i-lucide>
+                Message
+            </label>
+            <textarea 
+                name="text" 
+                id="text" 
+                placeholder="Type your message here..."
+                required
+                class="form-control"
+                rows="6"
+            ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            <i-lucide data-lucide="send" class="icon"></i-lucide>
+            Send Email
+        </button>
     </form>
-    
-</body>
+</div>

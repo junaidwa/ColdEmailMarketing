@@ -7,12 +7,46 @@
 </head>
 <body>
 <%- layout('layouts/boilerplate') %>
-<h1>Add Sender</h1>
-<form action="/addsender" method="POST">
-    <input type="email" name="email" placeholder="Enter sender email" required>
-    <button type="submit">Add Sender</button>
-</form>
-<p>Supported formats: PDF, DOC, DOCX, TXT</p>
+
+<div class="card">
+    <div class="text-center mb-4">
+        <i-lucide data-lucide="user-plus" class="icon mb-2" size="48"></i-lucide>
+        <h1>Add New Sender</h1>
+        <p>Add a new email sender to your account</p>
+    </div>
+
+    <form action="/addsender" method="POST" class="form">
+        <div class="form-group">
+            <label for="email">
+                <i-lucide data-lucide="mail" class="icon"></i-lucide>
+                Sender Email Address
+            </label>
+            <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="Enter sender's email address"
+                required
+                class="form-control"
+            >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+            Add Sender
+        </button>
+    </form>
+
+    <div class="info-box mt-4">
+        <div class="info-box-header">
+            <i-lucide data-lucide="info" class="icon"></i-lucide>
+            <h3 class="h6 mb-0">Important Note</h3>
+        </div>
+        <p class="info-box-text">
+            Make sure the email address you're adding has proper permissions to send emails through your system.
+        </p>
+    </div>
+</div>
 
     
 </body>

@@ -1,5 +1,75 @@
 <%- layout('layouts/boilerplate') %>
-<body>
-   
-   <h1>Welcome to Cold Email Platform</h1>
-</body>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to MyReach</h1>
+        <p class="hero-subtitle">The smart way to manage and send your business emails</p>
+        
+        <div class="hero-actions">
+            <% if (!currentUser) { %>
+                <a href="/signup" class="btn btn-primary">
+                    <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+                    Get Started
+                </a>
+                <a href="/login" class="btn btn-secondary">
+                    <i-lucide data-lucide="log-in" class="icon"></i-lucide>
+                    Log In
+                </a>
+            <% } else { %>
+                <a href="/SendMail" class="btn btn-primary">
+                    <i-lucide data-lucide="send" class="icon"></i-lucide>
+                    Send Email
+                </a>
+                <a href="/upload" class="btn btn-secondary">
+                    <i-lucide data-lucide="upload-cloud" class="icon"></i-lucide>
+                    Upload Documents
+                </a>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <i-lucide data-lucide="mail" class="feature-icon"></i-lucide>
+        <h3>Email Management</h3>
+        <p>Send emails efficiently with our streamlined email management system.</p>
+    </div>
+    
+    <div class="feature-card">
+        <i-lucide data-lucide="upload-cloud" class="feature-icon"></i-lucide>
+        <h3>Document Upload</h3>
+        <p>Upload and manage your documents with support for multiple formats.</p>
+    </div>
+    
+    <div class="feature-card">
+        <i-lucide data-lucide="users" class="feature-icon"></i-lucide>
+        <h3>Sender Management</h3>
+        <p>Add and manage multiple sender accounts for your email campaigns.</p>
+    </div>
+    
+    <div class="feature-card">
+        <i-lucide data-lucide="shield" class="feature-icon"></i-lucide>
+        <h3>Secure & Reliable</h3>
+        <p>Your data is protected with industry-standard security measures.</p>
+    </div>
+</div>
+
+<div class="cta-section">
+    <div class="cta-content">
+        <h2>Ready to streamline your email workflow?</h2>
+        <p>Join thousands of businesses using MyReach to manage their email communications.</p>
+        
+        <% if (!currentUser) { %>
+            <a href="/signup" class="btn btn-primary">
+                <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+                Create Your Account
+            </a>
+        <% } else { %>
+            <a href="/SendMail" class="btn btn-primary">
+                <i-lucide data-lucide="send" class="icon"></i-lucide>
+                Start Sending
+            </a>
+        <% } %>
+    </div>
+</div>

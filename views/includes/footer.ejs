@@ -66,10 +66,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="footer-left mb-3 mb-md-0">
+            <div class="footer-content">
+                <div class="footer-left">
                     <div class="footer-links">
-                        <span>© 2025 ManyReach, Inc.</span>
+                        <span>© 2025 MyReach, Inc.</span>
                         <span class="footer-divider">·</span>
                         <a href="#">Terms</a>
                         <span class="footer-divider">·</span>
@@ -82,21 +82,32 @@
                 </div>
                 
                 <div class="footer-right">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-globe me-1"></i> English (US)
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="#">English (US)</a></li>
-                            <li><a class="dropdown-item" href="#">Español</a></li>
-                            <li><a class="dropdown-item" href="#">Français</a></li>
-                        </ul>
+                    <button class="btn btn-secondary" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                        <i-lucide data-lucide="globe" class="icon"></i-lucide>
+                        English (US)
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="dropdown-item" href="#">English (US)</a>
+                        <a class="dropdown-item" href="#">Español</a>
+                        <a class="dropdown-item" href="#">Français</a>
                     </div>
                     
-                    <span>$ USD</span>
+                    <span class="footer-currency">
+                        <i-lucide data-lucide="dollar-sign" class="icon"></i-lucide>
+                        USD
+                    </span>
                     
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i-lucide data-lucide="twitter" class="icon"></i-lucide>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i-lucide data-lucide="facebook" class="icon"></i-lucide>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i-lucide data-lucide="linkedin" class="icon"></i-lucide>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

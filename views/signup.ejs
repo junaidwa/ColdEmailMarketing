@@ -1,27 +1,69 @@
 <%- layout('layouts/boilerplate') %>
-<body>
-    <h1>Signup for Email Sending Service</h1>
 
-    <form action="/signup" method="POST">
-        <label for="username">Username:</label>
-        <input type="username" name="username" id="username" placeholder="Enter your username" required>
+<div class="card">
+    <div class="text-center mb-4">
+        <i-lucide data-lucide="user-plus" class="icon mb-2" size="48"></i-lucide>
+        <h1>Create Your Account</h1>
+        <p>Join MyReach to start sending emails efficiently</p>
+    </div>
 
-        <br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email" required>
-        
-        <br><br>
+    <form action="/signup" method="POST" class="form">
+        <div class="form-group">
+            <label for="username">
+                <i-lucide data-lucide="user" class="icon"></i-lucide>
+                Username
+            </label>
+            <input 
+                type="text" 
+                name="username" 
+                id="username" 
+                placeholder="Choose a username"
+                required
+                class="form-control"
+            >
+        </div>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required>
-        
-        <br><br>
+        <div class="form-group">
+            <label for="email">
+                <i-lucide data-lucide="mail" class="icon"></i-lucide>
+                Email Address
+            </label>
+            <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="Enter your email"
+                required
+                class="form-control"
+            >
+        </div>
 
-        <button type="submit">Signup</button>
+        <div class="form-group">
+            <label for="password">
+                <i-lucide data-lucide="lock" class="icon"></i-lucide>
+                Password
+            </label>
+            <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Choose a secure password"
+                required
+                class="form-control"
+            >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            <i-lucide data-lucide="user-plus" class="icon"></i-lucide>
+            Create Account
+        </button>
     </form>
 
-    <br>
-    <p>Already have an account? <a href="/login">Login here</a></p>
-    
-</body>
+    <p class="text-center mt-4">
+        Already have an account? 
+        <a href="/login" class="text-primary">
+            <i-lucide data-lucide="log-in" class="icon"></i-lucide>
+            Login here
+        </a>
+    </p>
+</div>
